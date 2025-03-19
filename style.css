@@ -72,3 +72,24 @@ h1 {
     left: 1rem; top: 1rem;
     position: absolute;
 }
+
+@media (max-width: 480px) {
+    .logo-galilei {
+        display: none;
+    }
+
+    #mappa {
+        height: 20rem;
+        width: 70%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .qrcode {
+        margin: 1rem;
+    }
+
+    p {
+        padding: 1rem;
+    }
+}
