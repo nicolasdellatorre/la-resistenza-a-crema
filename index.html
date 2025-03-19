@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" type="image/png" href="img/flavicon.webp">
+        <title>La Resistenza a Crema</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    </head>
+    <body>
+        <div>
+            <img src="img/logogalilei.png" class="logo-galilei">
+            <div class="intestazione">
+                <h1>Il cammino della Resistenza a Crema</h1>
+            </div>
+            <div class="contenitore-centro"><div id="mappa"></div></div>
+
+            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+            <script>
+                var mappa = L.map('mappa').setView([45.3606, 9.6873], 14);
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(mappa);
+
+                var segnaposto = [
+                    { lat: 45.3587, lon: 9.67519, name: "Targa commemorativa Bestazza, Monfredini Paganini e Pedrazzini", addr: "Via Alcide de Gasperi, 67 - davanti stadio Voltini"},
+                    { lat: 45.3598, lon: 9.68182, name: "Targa commemorativa Festari Antonio", addr: "Viale Repubblica, 47 "},
+                    { lat: 45.3574, lon: 9.68780, name: "Targa commemorativa Follo Francesco", addr: "Via Carlo Urbino, 5"},
+                    { lat: 45.3575, lon: 9.68836, name: "Targa commemorativa Pirotta", addr: "Via Piacenza, 5 "},
+                    { lat: 45.3671, lon: 9.70378, name: "Targa commemorativa presso la scuola primaria di San Bernardino", addr: "Via Brescia, 23"},
+                    { lat: 45.3633, lon: 9.68663, name: "Targa commemorativa presso il portico del Famedio in Piazza Duomo", addr: "Piazza Duomo, 25"}
+                ];
+
+                segnaposto.forEach(segnaposto => {
+                    L.marker([segnaposto.lat, segnaposto.lon]).addTo(mappa)
+                        .bindPopup(`<div class='nomeSegnaposto'>${segnaposto.name}</div><div class="descrizioneSegnaposto">${segnaposto.addr}</div>`);
+                });
+            </script>
+            <div class="contenitore-centro">
+                <table>
+                    <tr>
+                        <td style="width: 40rem;">
+                            <p>Per scoprire di più sulla storia delle personalità che hanno contribuito alla Resistenza cremasca, scansiona il QR code:</p>
+                        </td>
+                        <td>
+                            <img src="img/qrcode.jpg" class="qrcode">
+                        </td>
+                </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

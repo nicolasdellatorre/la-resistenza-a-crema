@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'SF-Pro-Black';
+    src: url('fonts/SF-Pro-Display-Black.otf');
+}
+
+@font-face {
+    font-family: 'SF-Pro-Bold';
+    src: url('fonts/SF-Pro-Display-Bold.otf');
+}
+
+@font-face {
+    font-family: 'SF-Pro-Italic';
+    src: url('fonts/SF-Pro-Display-LightItalic.otf');
+}
+
+@font-face {
+    font-family: 'SF-Pro-Medio';
+    src: url('fonts/SF-Pro-Display-Medium.otf');
+}
+
+body {
+    background-color: #edf2f4;
+}
+
+p {
+    font-family: 'SF-Pro-Medio';
+    font-size: 1.5rem;
+}
+
+.contenitore-centro {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.intestazione {
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'SF-Pro-Black';
+    color: #c1121f;
+}
+
+#mappa {
+    height: 30rem;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nomeSegnaposto {
+    font-family: 'SF-Pro-Bold';
+}
+
+.descrizioneSegnaposto {
+    font-family: 'SF-Pro-Italic';
+}
+
+.qrcode {
+    width: 5rem;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-galilei {
+    width: 4rem;
+    height: auto;
+    left: 1rem; top: 1rem;
+    position: absolute;
+}
